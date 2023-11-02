@@ -1,24 +1,25 @@
 // script
 const swiper = new Swiper(".event-slider", {
   loop: true,
-  slidesPerView: 5,
+  slidesPerView: "auto",
   spaceBetween: 0,
-  // centeredSlides: true,
+  centeredSlides: true,
+  // centeredSlidesBounds: true,
 
-  // If we need pagination
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
+  breakpoints: {
+    1024: {
+      slidesPerView: 5,
+      centeredSlides: false,
+    },
   },
 });
